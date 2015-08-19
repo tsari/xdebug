@@ -1,0 +1,11 @@
+Protocol 2
+HostKey /etc/ssh/ssh_host_rsa_key
+AllowUsers docker
+PermitRootLogin  without-password
+PasswordAuthentication  no
+ChallengeResponseAuthentication no
+KeepAlive no
+ClientAliveInterval 15
+ClientAliveCountMax 9
+SyslogFacility AUTHPRIV
+Subsystem sftp /usr/lib/openssh/sftp-server
