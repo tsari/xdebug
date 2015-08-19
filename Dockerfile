@@ -6,7 +6,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get upgrade -y
 
 # install php and apache and clean up to minimize the image size
-RUN php5-dev \
+RUN apt-get install -y \
+    php5-dev \
     php-pear \
     openssh-server \
     make \
