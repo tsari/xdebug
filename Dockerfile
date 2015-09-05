@@ -28,7 +28,7 @@ RUN adduser --disabled-password --gecos '' docker && \
     cat /home/docker/docker-insecure-rsa.public.key > /home/docker/.ssh/authorized_keys2 && \
     chown -R docker:docker /home/docker
 
-EXPOSE 22 80
+EXPOSE 22
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 CMD ["/usr/bin/supervisord"]
